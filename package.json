@@ -1,0 +1,10 @@
+{
+  "name": "boilerplate",
+  "version": "0.0.1",
+  "description": "A boilerplate with grunt, live reload, angular and office ui fabric",
+  "author": "Alfred Gårdeskog",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
+}
