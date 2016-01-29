@@ -1,0 +1,70 @@
+@import '../../vendor/office-ui-fabric/dist/less/Fabric.less';
+@import '../../vendor/office-ui-fabric/dist/less/Fabric.Components.less';
+
+@asideWidth: 300px;
+
+html, body{
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+header.ms-CommandBar {
+    height: auto;
+    background-color: @ms-color-themePrimary;
+}
+
+.commandbar-item {
+    line-height: 46px;
+    display: inline-block;
+    
+    span {
+        padding-right: 25px;
+    }
+}
+
+.commandbar-item:not(:first-child) span {
+    padding-left: 25px;
+}
+
+.commandbar-item:not(:last-child) span {
+    border-right: 1px solid @ms-color-themeTertiary;
+}
+
+aside {
+    float: left;
+}
+
+aside nav {
+    padding: 10px 0 0 10px;
+    
+    .ms-Table {
+        margin-top: 16px;
+    }
+    
+    a {
+        text-decoration: none;
+        color: currentColor;
+    }
+}
+
+.header-text {
+    font-family: @ms-font-family-semilight;
+    font-size: 22px;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+aside {
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: @ms-color-neutralLight;
+    height: 100%;
+    width: @asideWidth;
+}
+
+#main {
+    margin-left: @asideWidth + 10;
+}

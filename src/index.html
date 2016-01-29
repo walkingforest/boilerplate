@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="MyApp" ng-controller="AppCtrl">
+<head>
+    <base href="/">
+    <title ng-bind="pageTitle"></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
+    <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+
+    <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
+    <script type="text/javascript" src="<%= file %>"></script><% }); %>
+</head>
+<body>
+    <header class="ms-bgColor-themePrimary ms-CommandBar">
+        <div class="ms-CommandBar-mainArea">
+            <div class="commandbar-item">
+                <span class="ms-font-l ms-font-weight-semibold ms-fontColor-white header-text">boilerplate</span>
+            </div>
+            <div class="commandbar-item">
+                <span class="ms-font-l ms-font-weight-semibold ms-fontColor-white header-text">boilerplate</span>
+            </div>
+        </div>
+    </header>
+    <aside>
+        <nav>
+            <div class="ms-Table">
+                <div class="ms-Table-row section-title">
+                    <!--ui-sref-active="active">-->
+            
+                    <span class="ms-font-xl">Pages</span>
+                </div>
+                <div class="ms-Table-row">
+                    <span class="ms-Table-cell"><a href ui-sref="home">Home</a></span>
+                </div>
+                <div class="ms-Table-row">
+                    <span class="ms-Table-cell">Another!</span>
+                </div>
+            </div>
+        </nav>
+    </aside>
+
+    <div id="main" ui-view="main"></div>
+
+</body>
+</html>
