@@ -1,12 +1,12 @@
 angular.module('MyApp', [
     'templates-app',
     'templates-common',
-    'MyApp.home',
+    'MyApp.collections',
     'ui.router'
 ])
 
 .config(function ($urlRouterProvider){
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/collections');
 })
 
 .run(function run() {

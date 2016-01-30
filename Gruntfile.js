@@ -8,6 +8,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-ng-annotate');
     grunt.loadNpmTasks('grunt-html2js');
 
     var modRewrite = require('connect-modrewrite');
@@ -29,9 +30,13 @@ module.exports = function(grunt) {
          * Static server
          */
         connect: {
+            options: {
+                    hostname: '*',
+            },
             server: {
                 options: {
                     livereload: true,
+                    hostname: '*',
                     base: 'build/',
                     port: 44300,
                     middleware: function(connect) {
@@ -200,7 +205,6 @@ module.exports = function(grunt) {
                 }
             }
         },
-
 
         /**
          * `jshint` defines the rules of our linter as well as which files we

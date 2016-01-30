@@ -25,16 +25,22 @@
     <aside>
         <nav>
             <div class="ms-Table">
-                <div class="ms-Table-row section-title">
+                <div class="ms-Table-row">
                     <!--ui-sref-active="active">-->
-            
                     <span class="ms-font-xl">Pages</span>
                 </div>
-                <div class="ms-Table-row">
-                    <span class="ms-Table-cell"><a href ui-sref="home">Home</a></span>
+                <div class="ms-Table-row" ui-sref-active="is-selected" ui-nested>
+                    <span class="ms-Table-cell"><a href ui-sref="collections">Something</a></span>
                 </div>
-                <div class="ms-Table-row">
+                <div class="ms-Table-row" ui-sref-active="is-selected" ui-nested>
                     <span class="ms-Table-cell">Another!</span>
+                </div>
+            </div>
+            <div class="ms-Table">
+                <div class="ms-Table-row" ui-sref-active="is-selected" ui-nested>
+                    <span class="ms-Table-cell">
+                        <a href ui-sref="create"><i class="ms-Icon ms-Icon--plus" aria-hidden="true"></i> Create stack</a>
+                    </span>
                 </div>
             </div>
         </nav>

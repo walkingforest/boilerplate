@@ -2,6 +2,7 @@
 @import '../../vendor/office-ui-fabric/dist/less/Fabric.Components.less';
 
 @asideWidth: 300px;
+@collectionListWidth: 450px;
 
 html, body{
     height: 100%;
@@ -58,13 +59,34 @@ aside nav {
 
 
 aside {
-    border-right-style: solid;
-    border-right-width: 1px;
-    border-right-color: @ms-color-neutralLight;
+    border-right: 1px solid @ms-color-neutralLight;
     height: 100%;
     width: @asideWidth;
 }
 
 #main {
-    margin-left: @asideWidth + 10;
+    margin-left: @asideWidth + 1;
+    height: 100%;
+    
+    table {
+        border-spacing: 0;
+        border-collapse: collapse;
+        width: 100%;
+        height: 100%;
+        
+        tr {
+            height: 100%;
+        }
+        
+        td {
+            vertical-align: top;
+            height: 100%;
+        }
+    }
+}
+
+#collection-list {
+    width: @collectionListWidth;
+    border-right: 1px solid @ms-color-neutralLight;
+    padding: 0 20px;
 }
